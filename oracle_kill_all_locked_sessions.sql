@@ -1,4 +1,4 @@
-# 批量kill所有带锁的会话
+# Oracle批量kill所有带锁的会话
 SELECT 'alter system kill session ''' || SID || ',' || SERIAL# || ''';'
 FROM V$SESSION
 WHERE SID in
